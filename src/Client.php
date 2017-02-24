@@ -71,7 +71,7 @@
 
         function deleteClient()
         {
-            $GLOBALS['DB']->exec("DELETE FROM client WHERE id ='{$this->getId()}';");
+            // $GLOBALS['DB']->exec("DELETE FROM client WHERE id ='{$this->getId()}';");
         }
 
         static function findClient($search_id)
