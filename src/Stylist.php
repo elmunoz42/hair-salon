@@ -58,7 +58,7 @@
 
         function deleteStylist()
         {
-            // $GLOBALS['DB']->exec("DELETE FROM stylist WHERE id ='{$this->getId()}';");
+            $GLOBALS['DB']->exec("DELETE FROM stylist WHERE id ='{$this->getId()}';");
         }
 
     }

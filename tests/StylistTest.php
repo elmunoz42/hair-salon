@@ -58,6 +58,7 @@
             // Assert
             $this->assertEquals($new_stylist, $result[0]);
         }
+        // test 4
         function test_updateName()
         {
             // Arrange
@@ -72,6 +73,7 @@
             // Assert
             $this->assertEquals($input_new_name, $result[0]->getName());
         }
+        // test 5
         function test_deleteStylist()
         {
             // Arrange
