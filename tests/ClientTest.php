@@ -33,6 +33,19 @@
             // Assert
             $this->assertEquals($input_name, $result);
         }
+        // test 1b
+        function test_getStylistId()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_stylist_id = 1;
+            $new_client = new Client($input_name, $input_stylist_id);
+
+            // Act
+            $result = $new_client->getStylistId();
+            // Assert
+            $this->assertEquals($input_stylist_id, $result);
+        }
         // test 2
     //     function test_getId()
     //     {
