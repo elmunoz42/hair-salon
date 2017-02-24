@@ -58,6 +58,25 @@
             // Assert
             $this->assertEquals($new_stylist, $result[0]);
         }
+        function test_updateName()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_new_name = "J-quin";
+            $new_stylist = new Stylist($input_name);
+            $new_stylist->save();
+            $new_stylist->updateName($input_new_name);
+
+            // Act
+            $result = Stylist::getAll();
+            // Assert
+            $this->assertEquals($input_new_name, $result[0]->getName());
+        }
+
+        // function test_getClientsById()
+        // {
+        //
+        // }
         // function test_()
         // {
         //     // Arrange

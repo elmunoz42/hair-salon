@@ -46,6 +46,10 @@
         {
             $GLOBALS['DB']->exec("DELETE FROM stylist;");
         }
+        function updateName($new_name)
+        {
+            
+        }
     }
 
  ?>
