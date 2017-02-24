@@ -60,19 +60,20 @@
             // Assert
             $this->assertEquals($input_id, $result);
         }
-    //     // test 9
-    //     function test_save()
-    //     {
-    //         // Arrange
-    //         $input_name = "Joaquin";
-    //         $new_client = new Client($input_name);
-    //         $new_client->save();
-    //
-    //         // Act
-    //         $result = Client::getAll();
-    //         // Assert
-    //         $this->assertEquals($new_client, $result[0]);
-    //     }
+        // test 9
+        function test_save()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_stylist_id = 1;
+            $new_client = new Client($input_name, $input_stylist_id);
+            $new_client->save();
+
+            // Act
+            $result = Client::getAll();
+            // Assert
+            $this->assertEquals($new_client, $result[0]);
+        }
     //     // test 4
     //     function test_updateName()
     //     {
