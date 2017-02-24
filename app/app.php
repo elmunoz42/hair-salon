@@ -99,16 +99,17 @@
     $app->delete("/clients", function() use ($app) {
 
         Client::deleteAll();
-
-        return $app['twig']->render('clients.html.twig', array('clients'=>Client::getAll()));
+        return $app['twig']->render('clients.html.twig', array('clients'=>Client::getAll(), 'stylists'=>Stylist::getAll()));
 
     });
     //Retrieve Client
     $app->get("/clients/{id}", function($id) use ($app) {
 
         $client = Client::findClient($id);
-        // $assigned_clients = Client::findByClient($id);
-        return $app['twig']->render('client.html.twig', array('client'=>$client));
+        $stylist_id = $client->getStylistId();
+        $assigned_stylist = Stylist::findStylist($stylist_id);
+
+        return $app['twig']->render('client.html.twig', array( 'client'=>$client, 'assigned_stylist' => $assigned_stylist));
 
     });
     //Update Client
@@ -116,8 +117,11 @@
 
         $client = Client::findClient($id);
         $client->updateName($_POST['new_name']);
+        $stylist_id = $client->getStylistId();
+        $assigned_stylist = Stylist::findStylist($stylist_id);
 
-        return $app['twig']->render('client.html.twig', array('client'=>$client));
+        return $app['twig']->render('client.html.twig', array( 'client'=>$client, 'assigned_stylist' => $assigned_stylist));
+
 
     });
     //Delete Client
@@ -127,7 +131,7 @@
         $deleted_client = $client;
         $client->deleteClient($id);
 
-        return $app['twig']->render('client_termination.html.twig', array('deleted_stylist'=>$deleted_stylist));
+        return $app['twig']->render('client_termination.html.twig', array('deleted_client'=>$deleted_client));
     });
 
 
