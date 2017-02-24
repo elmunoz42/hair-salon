@@ -11,16 +11,19 @@ __
 
 | Behavior                                              |   Input example   |  Output example |
 |-------------------------------------------------------|:-----------------:|:---------------:|
-| 1) User registers a new stylist  | | |
-| 2) User registers a new client | | |
-| 3) User retrieves clients by their assigned stylist.| | |
-| 4) User retrieves clients by their assigned stylist.| | |
-| 5) User updates a stylists information. | | |
-| 6) User updates a clients information. | | |
-| 7) User deletes all stylists. | | |
-| 8) User deletes all clients. | | |
-| 7) User deletes an individual stylists. | | |
-| 8) User deletes an individual clients. | | |
+| 1) User registers a new stylist.  | | |
+| 2) User retrieves a list of stylists. | | |
+| 3) User retrieves an individual stylist information. | | |
+| 4) User updates a stylist's information. | | |
+| 5) User deletes all stylists. | | |
+| 6) User deletes an individual stylists. | | |
+| 7) User registers a new client | | |
+| 8) User retrieves list of clients. | | |
+| 9) User retrieves an individual client information. | | |
+| 10) User updates a client's information. | | |
+| 11) User deletes all clients. | | |
+| 12) User retrieves clients by their assigned stylist.| | |
+
 
 
 
@@ -34,7 +37,7 @@ __
 * _mysql> USE hair_salon;_
 * _mysql> CREATE TABLE stylist (name VARCHAR(255), id serial PRIMARY KEY);_
 * _mysql> CREATE TABLE client (name VARCHAR(255), stylist_id INT, id serial PRIMARY KEY);_
-* 
+*
 
 * _Clone repository from github._
 * _Initiate a php server in terminal within the project directory._
