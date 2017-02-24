@@ -5,6 +5,9 @@
     require_once __DIR__."/../src/Student.php";
     require_once __DIR__."/../src/Teacher.php";
 
+    use Symfony\Component\Debug\Debug;
+    Debug::enable();
+
     $app = new Silex\Application();
 
     $app['debug']=true;
@@ -20,7 +23,7 @@
     use Symfony\Component\HttpFoundation\Request;
     Request::enableHttpMethodParameterOverride();
 
-
+    $
 
 
 

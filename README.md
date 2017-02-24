@@ -31,10 +31,10 @@ __
 
 # Database Tables Creation steps:
 * _mysql> CREATE DATABASE hair_salon;_
-* _USE hair_salon;_
+* _mysql> USE hair_salon;_
+* _mysql> CREATE TABLE stylist (name VARCHAR(255), id serial PRIMARY KEY);_
+* _mysql> CREATE TABLE client (name VARCHAR(255), stylist_id INT, id serial PRIMARY KEY);_
 * 
-*
-*
 
 * _Clone repository from github._
 * _Initiate a php server in terminal within the project directory._
