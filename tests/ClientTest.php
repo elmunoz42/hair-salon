@@ -130,7 +130,7 @@
             $this->assertEquals($input_name2, $result->getName());
         }
         // test 13
-        function test_findClientByStylistId()
+        function test_findClientsByStylist()
         {
             // Arrange
             $input_name = "Joaquin";
@@ -148,10 +148,11 @@
 
 
             // Act
-            $result = Client::findClientByStylistId($input_stylist_id3);
+            $result = Client::findClientsByStylist($input_stylist_id3);
+            var_dump($result);
 
             // Assert
-            $this->assertEquals($input_stylist_id3, $result->getStylistId());
+            $this->assertEquals($input_stylist_id3, $result[0]->getStylistId());
         }
 
     };
