@@ -72,7 +72,7 @@
             // Act
             $result = Client::getAll();
             // Assert
-            $this->assertEquals($new_client, $result[0]);
+            $this->assertEquals($input_name, $result[0]->getName());
         }
     //     // test 4
     //     function test_updateName()
