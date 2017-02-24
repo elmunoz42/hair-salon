@@ -72,6 +72,22 @@
             // Assert
             $this->assertEquals($input_new_name, $result[0]->getName());
         }
+        function test_deleteStylist()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $new_stylist = new Stylist($input_name);
+            $new_stylist->save();
+            $input_name2 = "Fernanda";
+            $new_stylist2 = new Stylist($input_name2);
+            $new_stylist2->save();
+            $new_stylist->deleteStylist();
+
+            // Act
+            $result = Stylist::getAll();
+            // Assert
+            $this->assertEquals($input_name2, $result[0]->getName());
+        }
 
         // function test_getClientsById()
         // {
