@@ -11,12 +11,12 @@ __
 
 | Behavior                                              |   Input example   |  Output example |
 |-------------------------------------------------------|:-----------------:|:---------------:|
-| 1) User registers a new stylist.  | | |
-| 2) User retrieves a list of stylists. | | |
-| 3) User retrieves an individual stylist information. | | |
-| 4) User updates a stylist's information. | | |
-| 5) User deletes all stylists. | | |
-| 6) User deletes an individual stylists. | | |
+| 1) User registers a new stylist.  | "Fernanda"| "Joaquin", "Fernanda" clickable list. |
+| 2) User retrieves a list of stylists. | click on stylists anchor | "Joaquin", "Fernanda" clickable list. |
+| 3) User retrieves an individual stylist information. | click on "Fernanda" | name:"Fernanda",id:2  |
+| 4) User updates a stylist's information. | in "Joaquin" page input new_name = "J-quin"| name:"J-Quin",id:1 |
+| 5) User deletes all stylists. | click delete button | "No stylists registered."|
+| 6) User deletes an individual stylists. | in "Fernanda" page click terminate-stylist | "Fernanda's file has been deleted." |
 | 7) User registers a new client | | |
 | 8) User retrieves list of clients. | | |
 | 9) User retrieves an individual client information. | | |

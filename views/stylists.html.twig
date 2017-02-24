@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hair Salon</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href='/css/styles.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="jumbotron" id="title">
+                    <h1>Your Hair Salon</h1>
+                </div>
+            </div>
+            <!-- row  -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="jumbotron">
+                        <h3><a href="/stylists">Stylists</a></h3>
+                        {% if stylists is not empty %}
+                            <ul>
+                                {% for stylist in stylists %}
+                                <li> name: {{ stylist.getName }}</li>
+                                <li> id: {{ stylist.getId }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% else %}
+                        <p>No stylists registered.</p>
+                        {% endif %}
+                    </div>
+                    <!-- jumbotron -->
+                </div>
+                <!-- left column -->
+                <div class="col-md-6">
+                    <div class="jumbotron">
+                        <h3>Register Stylist</h3>
+                        <form action="/stylists" method="post">
+                            <label for="stylist_name">Stylist name:</label>
+                            <input type="text" name="stylist_name" value="">
+                            <button type="submit" name="register-stylist">Submit</button>
+                        </form>
+                        <h3>Delete All</h3>
+                        <!-- <form action="/stylists/" method="post">
+
+                        </form> -->
+                        <!-- create form -->
+                    </div>
+                    <!-- jumbotron -->
+                </div>
+                <!-- right column -->
+            </div>
+            <!-- row -->
+        </div>
+    </body>
+</html>

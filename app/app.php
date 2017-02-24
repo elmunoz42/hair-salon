@@ -30,13 +30,13 @@
 
     });
     //Retrieve Stylists
-    $app->get("/Stylists", function() use ($app) {
+    $app->get("/stylists", function() use ($app) {
 
         return $app['twig']->render('stylists.html.twig', array('stylists'=>Stylist::getAll()));
 
     });
     //Create Stylists
-    $app->post("/Stylists", function() use ($app) {
+    $app->post("/stylists", function() use ($app) {
 
         $new_stylist = new Stylist($_POST['stylist_name']);
         $new_stylist->save();
@@ -45,7 +45,7 @@
 
     });
     //Retrieve Stylist
-    $app->get("/Stylists/{id}", function($id) use ($app) {
+    $app->get("/stylists/{id}", function($id) use ($app) {
 
         $stylist = Stylist::findStylist($id);
 
@@ -53,7 +53,7 @@
 
     });
     //Update Stylist
-    $app->patch("/Stylists/{id}", function($id) use ($app) {
+    $app->patch("/stylists/{id}", function($id) use ($app) {
 
         $stylist = Stylist::findStylist($id);
         $stylist->updateName($_POST['new_name']);
@@ -62,7 +62,7 @@
 
     });
     //Delete Stylist
-    $app->delete("/Stylists/Terminate/{id}", function($id) use ($app) {
+    $app->delete("/stylists/terminate/{id}", function($id) use ($app) {
 
         $stylist = Stylist::findStylist($id);
         $stylist->updateName($_POST['new_name']);
