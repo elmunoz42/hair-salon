@@ -23,7 +23,7 @@
     use Symfony\Component\HttpFoundation\Request;
     Request::enableHttpMethodParameterOverride();
 
-    $
+    $app->get("/")
 
 
 
