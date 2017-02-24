@@ -109,25 +109,27 @@
             // Assert
             $this->assertEquals($input_name2, $result[0]->getName());
         }
-    //     // test 12
-    //     function test_findClient()
-    //     {
-    //         // Arrange
-    //         $input_name = "Joaquin";
-    //         $new_client = new Client($input_name);
-    //         $new_client->save();
-    //         $input_name2 = "Fernanda";
-    //         $new_client2 = new Client($input_name2);
-    //         $new_client2->save();
-    //         $input2_id = $new_client2->getId();
-    //
-    //         // Act
-    //         $result = Client::findClient($input2_id);
-    //
-    //         // Assert
-    //         $this->assertEquals($input_name2, $result->getName());
-    //     }
-    //
+        // test 12
+        function test_findClient()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_stylist_id = 1;
+            $new_client = new Client($input_name, $input_stylist_id);
+            $new_client->save();
+            $input_name2 = "Fernanda";
+            $input_stylist_id2 = 1;
+            $new_client2 = new Client($input_name2, $input_stylist_id2);
+            $new_client2->save();
+            $input2_id = $new_client2->getId();
+
+            // Act
+            $result = Client::findClient($input2_id);
+
+            // Assert
+            $this->assertEquals($input_name2, $result->getName());
+        }
+
     };
 
  ?>
