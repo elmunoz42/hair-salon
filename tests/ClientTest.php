@@ -75,20 +75,21 @@
             $this->assertEquals($input_name, $result[0]->getName());
         }
     //     // test 4
-    //     function test_updateName()
-    //     {
-    //         // Arrange
-    //         $input_name = "Joaquin";
-    //         $input_new_name = "J-quin";
-    //         $new_client = new Client($input_name);
-    //         $new_client->save();
-    //         $new_client->updateName($input_new_name);
-    //
-    //         // Act
-    //         $result = Client::getAll();
-    //         // Assert
-    //         $this->assertEquals($input_new_name, $result[0]->getName());
-    //     }
+        function test_updateName()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_new_name = "J-quin";
+            $input_stylist_id = 1;
+            $new_client = new Client($input_name, $input_stylist_id);
+            $new_client->save();
+            $new_client->updateName($input_new_name);
+
+            // Act
+            $result = Client::getAll();
+            // Assert
+            $this->assertEquals($input_new_name, $result[0]->getName());
+        }
     //     // test 5
     //     function test_deleteClient()
     //     {
