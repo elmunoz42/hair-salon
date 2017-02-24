@@ -35,7 +35,7 @@
 
         function getStylistId()
         {
-            // return $this->stylist_id;
+            return $this->stylist_id;
         }
 
         // CRUD functions
