@@ -23,6 +23,16 @@
         {
             return $this->id;
         }
+
+        // CRUD functions
+        static function save()
+        {
+
+        }
+        static function getAll()
+        {
+            
+        }
     }
 
  ?>

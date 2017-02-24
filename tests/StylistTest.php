@@ -19,6 +19,7 @@
         //     Stylist::deleteAll();
         //     // Client::deleteAll();
         // }
+        
         // test 1
         function test_getName()
         {
@@ -31,6 +32,7 @@
             // Assert
             $this->assertEquals($input_name, $result);
         }
+        // test 2
         function test_getId()
         {
             // Arrange
@@ -42,6 +44,20 @@
             $result = $new_stylist->getId();
             // Assert
             $this->assertEquals($input_id, $result);
+        }
+        // test 3
+        function test_save()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_id = 1;
+            $new_stylist = new Stylist($input_name, $input_id);
+            $new_stylist->save();
+
+            // Act
+            $result = Stylist::getAll();
+            // Assert
+            $this->assertEquals($new_stylist, $result[0]);
         }
         // function test_()
         // {
