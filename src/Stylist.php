@@ -25,13 +25,26 @@
         }
 
         // CRUD functions
-        static function save()
+        function save()
         {
-
+            $GLOBALS['DB']->exec("INSERT INTO stylist (name) VALUES ('{$this->getName()}');");
+            $this->id = $GLOBALS['DB']->lastInsertId();
         }
         static function getAll()
         {
-            
+            $stylists = array();
+            $returnded_stylists = $GLOBALS['DB']->query("SELECT * FROM stylist;");
+            foreach ($returnded_stylists as $stylist){
+                $stylist_name = $stylist['name'];
+                $stylist_id = $stylist['id'];
+                $retrieved_stylist = new Stylist($stylist_name, $stylist_id);
+                array_push($stylists, $retrieved_stylist);
+            }
+            return $stylists;
+        }
+        static function deleteAll()
+        {
+            $GLOBALS['DB']->exec("DELETE FROM stylist;");
         }
     }
 

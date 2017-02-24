@@ -14,12 +14,12 @@
 
     class StylistTest extends PHPUnit_Framework_TestCase
     {
-        // protected function tearDown()
-        // {
-        //     Stylist::deleteAll();
-        //     // Client::deleteAll();
-        // }
-        
+        protected function tearDown()
+        {
+            Stylist::deleteAll();
+            // Client::deleteAll();
+        }
+
         // test 1
         function test_getName()
         {
@@ -50,8 +50,7 @@
         {
             // Arrange
             $input_name = "Joaquin";
-            $input_id = 1;
-            $new_stylist = new Stylist($input_name, $input_id);
+            $new_stylist = new Stylist($input_name);
             $new_stylist->save();
 
             // Act
