@@ -53,7 +53,7 @@
                 $client_name = $client['name'];
                 $client_stylist_id = $client['stylist_id'];
                 $client_id = $client['id'];
-                $retrieved_client = new Client($client_name, $stylist_id, $client_id);
+                $retrieved_client = new Client($client_name, $client_stylist_id, $client_id);
                 array_push($clients, $retrieved_client);
             }
             return $clients;
@@ -110,7 +110,7 @@
                     array_push($found_clients, $client);
                 }
             }
-            // return $found_clients;
+            return $found_clients;
             return $clients;
         }
 
