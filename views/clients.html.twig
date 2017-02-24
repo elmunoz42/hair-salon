@@ -37,6 +37,13 @@
                         <form action="/clients" method="post">
                             <label for="client_name">Stylist name:</label><br>
                             <input type="text" name="client_name" value=""><br>
+                            {% if stylists is not empty %}
+                            <select name="stylist_id">
+                                {% for stylist in stylists %}
+                                    <option value="{{stylist.getId}}">{{stylist.getName}}</option>
+                                {% endfor %}
+                            </select>
+                            {% endif %}
                             <button type="submit" name="register-client">Submit</button>
                         </form>
                         <h3>Delete All</h3>

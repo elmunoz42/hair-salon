@@ -82,16 +82,17 @@
     //Retrieve Clients
     $app->get("/clients", function() use ($app) {
 
-        return $app['twig']->render('clients.html.twig', array('clients'=>Client::getAll()));
+        return $app['twig']->render('clients.html.twig', array('clients'=>Client::getAll(), 'stylists'=>Stylist::getAll()));
 
     });
     //Create Clients
     $app->post("/clients", function() use ($app) {
 
-        $new_client = new Client($_POST['client_name']);
+
+        $new_client = new Client($_POST['client_name'], $_POST['stylist_id']);
         $new_client->save();
 
-        return $app['twig']->render('clients.html.twig', array('clients'=>Client::getAll()));
+        return $app['twig']->render('clients.html.twig', array('clients'=>Client::getAll(), 'stylists'=>Stylist::getAll()));
 
     });
     //Delete all Clients
