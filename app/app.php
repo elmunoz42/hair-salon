@@ -44,6 +44,14 @@
         return $app['twig']->render('stylists.html.twig', array('stylists'=>Stylist::getAll()));
 
     });
+    //Delete all Stylists
+    $app->delete("/stylists", function() use ($app) {
+
+        Stylist::deleteAll();
+
+        return $app['twig']->render('stylists.html.twig', array('stylists'=>Stylist::getAll()));
+
+    });
     //Retrieve Stylist
     $app->get("/stylists/{id}", function($id) use ($app) {
 
