@@ -41,21 +41,21 @@
         // CRUD functions
         function save()
         {
-            $GLOBALS['DB']->exec("INSERT INTO client (name) VALUES ('{$this->getName()}');");
-            $this->id = $GLOBALS['DB']->lastInsertId();
+            // $GLOBALS['DB']->exec("INSERT INTO client (name) VALUES ('{$this->getName()}');");
+            // $this->id = $GLOBALS['DB']->lastInsertId();
         }
 
         static function getAll()
         {
-            $clients = array();
-            $returnded_clients = $GLOBALS['DB']->query("SELECT * FROM client;");
-            foreach ($returnded_clients as $client){
-                $client_name = $client['name'];
-                $client_id = $client['id'];
-                $retrieved_client = new Client($client_name, $client_id);
-                array_push($clients, $retrieved_client);
-            }
-            return $clients;
+            // $clients = array();
+            // $returnded_clients = $GLOBALS['DB']->query("SELECT * FROM client;");
+            // foreach ($returnded_clients as $client){
+            //     $client_name = $client['name'];
+            //     $client_id = $client['id'];
+            //     $retrieved_client = new Client($client_name, $client_id);
+            //     array_push($clients, $retrieved_client);
+            // }
+            // return $clients;
         }
 
         static function deleteAll()

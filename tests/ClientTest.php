@@ -20,7 +20,7 @@
         //     Stylist::deleteAll();
         // }
 
-        // test 1
+        // test 7
         function test_getName()
         {
             // Arrange
@@ -33,7 +33,7 @@
             // Assert
             $this->assertEquals($input_name, $result);
         }
-        // test 1b
+        // test 7b
         function test_getStylistId()
         {
             // Arrange
@@ -46,20 +46,21 @@
             // Assert
             $this->assertEquals($input_stylist_id, $result);
         }
-        // test 2
-    //     function test_getId()
-    //     {
-    //         // Arrange
-    //         $input_name = "Joaquin";
-    //         $input_id = 1;
-    //         $new_client = new Client($input_name, $input_id);
-    //
-    //         // Act
-    //         $result = $new_client->getId();
-    //         // Assert
-    //         $this->assertEquals($input_id, $result);
-    //     }
-    //     // test 3
+        // test 8
+        function test_getId()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_stylist_id = 1;
+            $input_id = 1;
+            $new_client = new Client($input_name, $input_stylist_id);
+
+            // Act
+            $result = $new_client->getId();
+            // Assert
+            $this->assertEquals($input_id, $result);
+        }
+    //     // test 9
     //     function test_save()
     //     {
     //         // Arrange
