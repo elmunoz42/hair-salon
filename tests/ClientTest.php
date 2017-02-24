@@ -53,7 +53,7 @@
             $input_name = "Joaquin";
             $input_stylist_id = 1;
             $input_id = 1;
-            $new_client = new Client($input_name, $input_stylist_id);
+            $new_client = new Client($input_name, $input_stylist_id, $input_id);
 
             // Act
             $result = $new_client->getId();
