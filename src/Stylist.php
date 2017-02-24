@@ -15,10 +15,12 @@
         {
             $this->name = $new_name;
         }
+
         function getName()
         {
             return $this->name;
         }
+        
         function getId()
         {
             return $this->id;
@@ -30,6 +32,7 @@
             $GLOBALS['DB']->exec("INSERT INTO stylist (name) VALUES ('{$this->getName()}');");
             $this->id = $GLOBALS['DB']->lastInsertId();
         }
+
         static function getAll()
         {
             $stylists = array();
@@ -42,14 +45,17 @@
             }
             return $stylists;
         }
+
         static function deleteAll()
         {
             $GLOBALS['DB']->exec("DELETE FROM stylist;");
         }
+
         function updateName($new_name)
         {
-            
+            $GLOBALS['DB']->exec("UPDATE stylist SET name = '{$new_name}' WHERE id = {$this->getId()};");
         }
+
     }
 
  ?>
