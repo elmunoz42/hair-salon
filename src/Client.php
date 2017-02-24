@@ -86,6 +86,18 @@
            }
            return $found_client;
         }
+        static function findClientByStylistId($search_id)
+        {
+           $found_client = null;
+           $clients = Client::getAll();
+           foreach($clients as $client){
+               $stylist_id = $client->getStylistId();
+               if ( $stylist_id == $search_id){
+                   $found_client = $client;
+               }
+           }
+           return $found_client;
+        }
 
     }
 

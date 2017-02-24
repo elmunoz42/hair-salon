@@ -129,6 +129,30 @@
             // Assert
             $this->assertEquals($input_name2, $result->getName());
         }
+        // test 13
+        function test_findClientByStylistId()
+        {
+            // Arrange
+            $input_name = "Joaquin";
+            $input_stylist_id = 1;
+            $new_client = new Client($input_name, $input_stylist_id);
+            $new_client->save();
+            $input_name2 = "Fernanda";
+            $input_stylist_id2 = 1;
+            $new_client2 = new Client($input_name2, $input_stylist_id2);
+            $new_client2->save();
+            $input_name3 = "Rodrigo";
+            $input_stylist_id3 = 2;
+            $new_client3 = new Client($input_name3, $input_stylist_id3);
+            $new_client3->save();
+
+
+            // Act
+            $result = Client::findClientByStylistId($input_stylist_id3);
+
+            // Assert
+            $this->assertEquals($input_stylist_id3, $result->getStylistId());
+        }
 
     };
 
