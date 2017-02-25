@@ -17,7 +17,7 @@ body {
   margin-left: 4px;
   margin-top: 0px;
   margin-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
   background: url("../hairstyle2.png") no-repeat center center;
   background-size: 948px 639px;
   /*-moz-background-size: 100% 100%;
@@ -27,7 +27,9 @@ body {
   border-style: groove;*/
   border-width: 2px;
 }
-
+button {
+    margin-top: 10px;
+}
 #top {
     margin-bottom: 200px;
 }
@@ -50,4 +52,8 @@ body {
 }
 .white {
     color: white;
+}
+.nav {
+    margin-left: 20px;
+    margin-right: 20px;
 }

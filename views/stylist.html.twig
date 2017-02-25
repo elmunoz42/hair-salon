@@ -9,10 +9,10 @@
         <div class="container">
             <div class="row">
                 <div class="jumbotron" id="title">
+                    <label class="white nav"><a href="/clients">back to clients</a></label>
+                    <label class="white nav"><a href="/stylists">back to stylists</a></label>
+                    <label class="white nav"><a href="/">back to home</a></label>
                     <h1>Hair Salon</h1>
-                    <label><a href="/clients">back to clients</a></label><br>
-                    <label><a href="/stylists">back to stylists</a></label><br>
-                    <label><a href="/">back to home</a></label>
                 </div>
             </div>
             <!-- row  -->
@@ -41,21 +41,21 @@
                 <div class="col-md-6">
                     <div class="jumbotron" id="right">
                         <h3>Update Stylist</h3>
-                        <form action="/stylists/{{ stylist.getId }}" method="post">
+                        <form class="black" action="/stylists/{{ stylist.getId }}" method="post">
                             <input name="_method" type="hidden" value="patch" required>
                             <label class="white" for="new_name">Stylist New Name:</label><br>
                             <input type="text" name="new_name" value=""><br>
                             <button  type="submit" name="update-stylist">Submit</button>
                         </form>
                         <h3>Add New Clients</h3>
-                        <form action="/stylists/{{ stylist.getId }}" method="post">
+                        <form class="black" action="/stylists/{{ stylist.getId }}" method="post">
                             <input type="hidden" name="stylist_id" value="{{ stylist.getId }}">
                             <label class="white"for="client_name">Clients name:</label><br>
                             <input type="text" name="client_name"><br>
                             <button type="submit" name="register-client">Submit</button>
                         </form>
                         <h3>Delete Stylist</h3>
-                        <form action="/stylists/terminate/{{ stylist.getId }}" method="post">
+                        <form class="black" action="/stylists/terminate/{{ stylist.getId }}" method="post">
                             <input name="_method" type="hidden" value="delete" required>
                             <button type="submit" class="btn button-danger" name="button">Delete This Stylist</button>
                         </form>
