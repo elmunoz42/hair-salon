@@ -43,14 +43,14 @@
                         <h3>Update Stylist</h3>
                         <form action="/stylists/{{ stylist.getId }}" method="post">
                             <input name="_method" type="hidden" value="patch" required>
-                            <label for="new_name">Stylist New Name:</label><br>
+                            <label class="white" for="new_name">Stylist New Name:</label><br>
                             <input type="text" name="new_name" value=""><br>
-                            <button type="submit" name="update-stylist">Submit</button>
+                            <button  type="submit" name="update-stylist">Submit</button>
                         </form>
                         <h3>Add New Clients</h3>
                         <form action="/stylists/{{ stylist.getId }}" method="post">
                             <input type="hidden" name="stylist_id" value="{{ stylist.getId }}">
-                            <label for="client_name">Clients name:</label><br>
+                            <label class="white"for="client_name">Clients name:</label><br>
                             <input type="text" name="client_name"><br>
                             <button type="submit" name="register-client">Submit</button>
                         </form>
