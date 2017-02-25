@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row">
                 <div class="jumbotron" id="title">
-                    <h1>Your Hair Salon</h1>
+                    <h1>Hair Salon</h1>
                     <label><a href="/clients">back to clients</a></label><br>
                     <label><a href="/stylists">back to stylists</a></label><br>
                     <label><a href="/">back to home</a></label>
@@ -18,7 +18,7 @@
             <!-- row  -->
             <div class="row">
                 <div class="col-md-6">
-                    <div class="jumbotron">
+                    <div class="jumbotron" id="left">
                         <h3><a href="/stylists">Stylists</a></h3>
                         {% if stylists is not empty %}
                                 {% for stylist in stylists %}
@@ -35,7 +35,7 @@
                 </div>
                 <!-- left column -->
                 <div class="col-md-6">
-                    <div class="jumbotron">
+                    <div class="jumbotron" id="right">
                         <h3>Register New Stylist</h3>
                         <form action="/stylists" method="post">
                             <label for="stylist_name">Stylist name:</label><br>

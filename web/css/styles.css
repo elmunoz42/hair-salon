@@ -1,0 +1,53 @@
+
+#title{
+  text-align: center;
+  /*background-image: url("../hairstyle.jpeg");*/
+  /*background-color: orange;*/
+  margin-top: 10px;
+
+}
+
+html {
+    background-color: black;
+}
+body {
+  color: white;
+  border-radius: 8px;
+  margin-right: 4px;
+  margin-left: 4px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  background: url("../hairstyle2.png") no-repeat center center;
+  background-size: 948px 639px;
+  /*-moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -o-background-size: 100% 100%;*/
+  /*border-color: white;
+  border-style: groove;*/
+  border-width: 2px;
+}
+
+#top {
+    margin-bottom: 200px;
+}
+#left {
+    text-align: left;
+}
+#right {
+    text-align: right;
+}
+.jumbotron {
+
+  background:transparent;
+
+}
+.jumbotron label {
+    text-align: right;
+}
+.black {
+    color: black;
+}
+.white {
+    color: white;
+}

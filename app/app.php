@@ -56,8 +56,18 @@
     $app->get("/stylists/{id}", function($id) use ($app) {
 
         $stylist = Stylist::findStylist($id);
-        // $assigned_clients = Client::findByStylist($id);
-        return $app['twig']->render('stylist.html.twig', array('stylist'=>$stylist));
+        $assigned_clients = Client::findClientsByStylist($id);
+        return $app['twig']->render('stylist.html.twig', array('stylist'=>$stylist, 'assigned_clients'=>$assigned_clients));
+
+    });
+    // Create a new client assigned to this stylist
+    $app->post("/stylists/{id}", function($id) use ($app) {
+
+        $new_client = new Client($_POST['client_name'], $_POST['stylist_id']);
+        $new_client->save();
+        $stylist = Stylist::findStylist($id);
+        $assigned_clients = Client::findClientsByStylist($id);
+        return $app['twig']->render('stylist.html.twig', array('stylist'=>$stylist, 'assigned_clients'=>$assigned_clients));
 
     });
     //Update Stylist
@@ -65,8 +75,10 @@
 
         $stylist = Stylist::findStylist($id);
         $stylist->updateName($_POST['new_name']);
+        $assigned_clients = Client::findClientsByStylist($id);
 
-        return $app['twig']->render('stylist.html.twig', array('stylist'=>$stylist));
+        return $app['twig']->render('stylist.html.twig', array('stylist'=>$stylist, 'assigned_clients'=>$assigned_clients));
+
 
     });
     //Delete Stylist
