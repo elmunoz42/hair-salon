@@ -60,4 +60,4 @@ _No support._
 
 *MIT*
 
-Copyright (c) 2017 **_Dan Lauby and Carlos Munoz Kampff_**
+Copyright (c) 2017 **_Carlos Munoz Kampff_**
