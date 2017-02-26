@@ -6,8 +6,10 @@
 
 ## Description
 
-__
+_App that allows hair salon owners and managers to register stylists and clients, view their information, update the information, assign clients to a stylist and delete clients or stylists._
 
+
+## Specifications
 
 | Behavior                                              |   Input example   |  Output example |
 |-------------------------------------------------------|:-----------------:|:---------------:|
@@ -23,11 +25,6 @@ __
 | 10) User updates a client's information. | in "Joaquin" page input new_name = "J-quin"| name:"J-Quin", id:1|
 | 11) User deletes all clients. |click delete button | "No clients registered."|
 | 12) User retrieves clients by their assigned stylist.| "Fred" | "Joaquin", "Fernanda"|
-
-
-
-
-## Specifications
 
 
 ## Setup/Installation Requirements
