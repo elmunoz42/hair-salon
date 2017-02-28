@@ -29,7 +29,7 @@ _App that allows hair salon owners and managers to register stylists and clients
 
 ## Setup/Installation Requirements
 
-# Database Tables Creation steps:
+### Database Tables Creation steps:
 * _mysql> CREATE DATABASE hair_salon;_
 * _mysql> USE hair_salon;_
 * _mysql> CREATE TABLE stylist (name VARCHAR(255), id serial PRIMARY KEY);_
@@ -39,7 +39,7 @@ _App that allows hair salon owners and managers to register stylists and clients
 * _mysql> CREATE TABLE stylist (name VARCHAR(255), id serial PRIMARY KEY);_
 * _mysql> CREATE TABLE client (name VARCHAR(255), stylist_id INT, id serial PRIMARY KEY);_
 
-# Installation:
+### Installation:
 * _unzip the hair_salon.sql.zip_
 * _run MAMP and click start servers._
 * _Clone repository from github._
