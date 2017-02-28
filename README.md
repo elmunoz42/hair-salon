@@ -34,12 +34,19 @@ _App that allows hair salon owners and managers to register stylists and clients
 * _mysql> USE hair_salon;_
 * _mysql> CREATE TABLE stylist (name VARCHAR(255), id serial PRIMARY KEY);_
 * _mysql> CREATE TABLE client (name VARCHAR(255), stylist_id INT, id serial PRIMARY KEY);_
+* _mysql> CREATE DATABASE hair_salon_test;_
+* _mysql> USE hair_salon_test;_
+* _mysql> CREATE TABLE stylist (name VARCHAR(255), id serial PRIMARY KEY);_
+* _mysql> CREATE TABLE client (name VARCHAR(255), stylist_id INT, id serial PRIMARY KEY);_
 
+# Installation:
+* _unzip the hair_salon.sql.zip_
+* _run MAMP and click start servers._
 * _Clone repository from github._
-* _Initiate a php server in terminal within the project directory._
 * _In Terminal run: Install composer_
-* _Open localhost:8000_
-* _Enjoy_
+* _Initiate a php server in terminal within the web folder of the project._
+* _Open localhost:8000 in the browser of your choice._
+
 
 _web browser and PHP 5 are necessary to operate this _
 
@@ -55,6 +62,7 @@ _No support._
 
 * _PHP_
 * _Silex_
+* _MySQL_
 
 ### License
 
